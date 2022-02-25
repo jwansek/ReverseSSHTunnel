@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  tunnel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: jwansek/reversesshtunnel
+    network_mode: host
+    volumes:
+      - ./vps.pem:/app/vps.pem
+      - ./tunnel.conf:/app/tunnel.conf
