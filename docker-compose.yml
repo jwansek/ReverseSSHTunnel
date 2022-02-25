@@ -8,5 +8,6 @@ services:
     image: jwansek/reversesshtunnel
     network_mode: host
     volumes:
+      - /dev/tty:/dev/tty
       - ./vps.pem:/app/vps.pem
       - ./tunnel.conf:/app/tunnel.conf

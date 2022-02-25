@@ -4,7 +4,7 @@ import subprocess
 CONFIG = configparser.ConfigParser()
 CONFIG.read("tunnel.conf")
 
-cmd = ["autossh", "-nNTv"]
+cmd = ["autossh", "-nNTv", "-o", "StrictHostKeyChecking=no"]
 
 if CONFIG.has_option("server", "ssh_port"):
     cmd += ["-p", CONFIG.get("server", "ssh_port")]
