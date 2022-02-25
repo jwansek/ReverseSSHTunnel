@@ -9,5 +9,5 @@ services:
     network_mode: host
     volumes:
       - /dev/tty:/dev/tty
-      - ./vps.pem:/app/vps.pem
+      - /home/eden/dotfiles/ssh_keys/london.pem:/app/vps.pem
       - ./tunnel.conf:/app/tunnel.conf
