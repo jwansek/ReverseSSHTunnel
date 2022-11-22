@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:20.04
 MAINTAINER Eden Attenborough "eddie.atten.ea29@gmail.com"
 RUN apt-get update -y
 RUN apt-get install -y autossh python3-pip python-dev build-essential
